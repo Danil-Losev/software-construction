@@ -76,7 +76,7 @@ impl Ui for KrsuUI {
             ]));
         }
         if !exec_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Problem Statement & Verification Tools".to_string(),
                 lines: exec_lines,
             });
@@ -103,7 +103,7 @@ impl Ui for KrsuUI {
                     Span::styled(prereqs, Style::default().fg(Color::LightCyan)),
                 ]));
             }
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: format!("Test Groups Specification ({})", problem.test_groups.len()),
                 lines: group_lines,
             });
@@ -131,7 +131,7 @@ impl Ui for KrsuUI {
                 Span::styled(format!("{:<10}", points_s), Style::default().fg(Color::Green)),
             ]));
         }
-        sections.push(TerminalUiSection {
+        sections.push(TerminalUiSection { table: None,
             section_title: format!("Individual Test Cases ({})", problem.test_cases.len()),
             lines: test_lines,
         });

@@ -126,7 +126,7 @@ impl Ui for EjudgeUI {
                 Span::styled(sol.clone(), Style::default().fg(Color::LightGreen)),
             ]));
         }
-        sections.push(TerminalUiSection {
+        sections.push(TerminalUiSection { table: None,
             section_title: "Problem Configuration (problem.cfg)".to_string(),
             lines: config_lines,
         });
@@ -140,7 +140,7 @@ impl Ui for EjudgeUI {
                 Span::styled("    Report Stats to Users: ", Style::default().fg(Color::DarkGray)),
                 Span::styled(global.report_statistics_to_users.to_string(), Style::default().fg(Color::White)),
             ]));
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Valuer Global Options (valuer.cfg)".to_string(),
                 lines: val_global_lines,
             });
@@ -209,7 +209,7 @@ impl Ui for EjudgeUI {
                 ]));
             }
 
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: format!("Valuer Evaluation Groups ({})", problem.valuer_test_groups.len()),
                 lines: val_group_lines,
             });

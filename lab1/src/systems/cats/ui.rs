@@ -90,7 +90,7 @@ impl Ui for CatsUI {
             for line in stmt.content_stml.lines() {
                 stmt_lines.push(Line::from(format!("  {}", line)));
             }
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Problem Statement & Description".to_string(),
                 lines: stmt_lines,
             });
@@ -125,7 +125,7 @@ impl Ui for CatsUI {
             }
         }
         if !format_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Input/Output Specifications & Constraints".to_string(),
                 lines: format_lines,
             });
@@ -166,7 +166,7 @@ impl Ui for CatsUI {
                 }
                 sample_lines.push(Line::from(""));
             }
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: format!("Sample Demonstrations ({})", problem.sample_demonstrations.len()),
                 lines: sample_lines,
             });
@@ -214,7 +214,7 @@ impl Ui for CatsUI {
             ]));
         }
         if !tool_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Executables, Checkers & Solutions".to_string(),
                 lines: tool_lines,
             });
@@ -245,7 +245,7 @@ impl Ui for CatsUI {
             ]));
         }
         if !test_spec_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Test Ranges & Test Sets".to_string(),
                 lines: test_spec_lines,
             });
@@ -273,7 +273,7 @@ impl Ui for CatsUI {
             ]));
         }
         if !asset_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Assets, Imports & Keywords".to_string(),
                 lines: asset_lines,
             });

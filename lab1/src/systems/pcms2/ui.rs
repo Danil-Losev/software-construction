@@ -116,7 +116,7 @@ impl Ui for Pcms2UI {
             ]));
         }
         if !name_docs_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Problem Names & Statement Documents".to_string(),
                 lines: name_docs_lines,
             });
@@ -167,7 +167,7 @@ impl Ui for Pcms2UI {
             ]));
         }
         if !asset_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Verification Tools, Checkers & Solutions".to_string(),
                 lines: asset_lines,
             });
@@ -229,7 +229,7 @@ impl Ui for Pcms2UI {
             testset_lines.push(Line::from(""));
         }
         if !testset_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Test Sets & Subtask Hierarchy".to_string(),
                 lines: testset_lines,
             });
@@ -252,7 +252,7 @@ impl Ui for Pcms2UI {
             }
         }
         if !sample_lines.is_empty() {
-            sections.push(TerminalUiSection {
+            sections.push(TerminalUiSection { table: None,
                 section_title: "Sample Tests & Test Definitions Preview".to_string(),
                 lines: sample_lines,
             });
